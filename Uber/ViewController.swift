@@ -37,8 +37,20 @@ class ViewController: UIViewController {
                     if error != nil {
                         self.displayAlert(title: "Error", message: error!.localizedDescription)
                     } else {
-                        print("Sign Up Success")
-                        self.performSegue(withIdentifier: "riderSegue", sender: nil)
+                        if self.riderDriverSwitch.isOn{
+                            // DRIVER
+                            self.performSegue(withIdentifier: "driverSegue", sender: nil)
+                            let ref = Auth.auth().currentUser?.createProfileChangeRequest()
+                            ref?.displayName = "Driver"
+                            ref?.commitChanges(completion: nil)
+                        } else {
+                            // RIDER
+                            self.performSegue(withIdentifier: "riderSegue", sender: nil)
+                            let ref = Auth.auth().currentUser?.createProfileChangeRequest()
+                            ref?.displayName = "Rider"
+                            ref?.commitChanges(completion: nil)
+                        }
+                        
 
                     }
                 })
@@ -48,8 +60,14 @@ class ViewController: UIViewController {
                     if error != nil {
                         self.displayAlert(title: "Error", message: error!.localizedDescription)
                     } else {
-                        print("Login Success")
-                        self.performSegue(withIdentifier: "riderSegue", sender: nil)
+                        if user?.user.displayName == "Driver" {
+                            //Driver
+                            self.performSegue(withIdentifier: "driverSegue", sender: nil)
+
+                        } else {
+                            //Rider
+                            self.performSegue(withIdentifier: "riderSegue", sender: nil)
+                        }
                     }
                 })
             }

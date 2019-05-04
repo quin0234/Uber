@@ -15,6 +15,7 @@
 		BDB17965227BB16B005A7C6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDB17963227BB16B005A7C6E /* Main.storyboard */; };
 		BDB17967227BB16C005A7C6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB17966227BB16C005A7C6E /* Assets.xcassets */; };
 		BDB1796A227BB16C005A7C6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDB17968227BB16C005A7C6E /* LaunchScreen.storyboard */; };
+		BDED937A227E4EB5009E8367 /* DriverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDED9379227E4EB5009E8367 /* DriverTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		BDB17966227BB16C005A7C6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDB17969227BB16C005A7C6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDB1796B227BB16C005A7C6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDED9379227E4EB5009E8367 /* DriverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DriverTableViewController.swift; path = /Users/paulquinnell/Desktop/Uber/Uber/DriverTableViewController.swift; sourceTree = "<absolute>"; };
 		C307D47886434F177A788BFC /* Pods-Uber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uber.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Uber/Pods-Uber.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 				BDB17961227BB16B005A7C6E /* ViewController.swift */,
 				BDB17963227BB16B005A7C6E /* Main.storyboard */,
 				BD8C0412227BC2B6006064C4 /* RiderViewController.swift */,
+				BDED9379227E4EB5009E8367 /* DriverTableViewController.swift */,
 				BDB17966227BB16C005A7C6E /* Assets.xcassets */,
 				BDB17968227BB16C005A7C6E /* LaunchScreen.storyboard */,
 				BDB1796B227BB16C005A7C6E /* Info.plist */,
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD8C0413227BC2B6006064C4 /* RiderViewController.swift in Sources */,
+				BDED937A227E4EB5009E8367 /* DriverTableViewController.swift in Sources */,
 				BDB17962227BB16B005A7C6E /* ViewController.swift in Sources */,
 				BDB17960227BB16B005A7C6E /* AppDelegate.swift in Sources */,
 			);
