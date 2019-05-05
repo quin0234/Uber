@@ -10,6 +10,7 @@
 		1B81465AB5B72F6CDE92BA42 /* Pods_Uber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DF4A1F539231F92688C8058 /* Pods_Uber.framework */; };
 		BD8C0411227BB3C4006064C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD8C0410227BB3C4006064C4 /* GoogleService-Info.plist */; };
 		BD8C0413227BC2B6006064C4 /* RiderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8C0412227BC2B6006064C4 /* RiderViewController.swift */; };
+		BD97090A227E72760076338A /* AcceptRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD970909227E72760076338A /* AcceptRequestViewController.swift */; };
 		BDB17960227BB16B005A7C6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB1795F227BB16B005A7C6E /* AppDelegate.swift */; };
 		BDB17962227BB16B005A7C6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB17961227BB16B005A7C6E /* ViewController.swift */; };
 		BDB17965227BB16B005A7C6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDB17963227BB16B005A7C6E /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		8DF4A1F539231F92688C8058 /* Pods_Uber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Uber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD8C0410227BB3C4006064C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BD8C0412227BC2B6006064C4 /* RiderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiderViewController.swift; sourceTree = "<group>"; };
+		BD970909227E72760076338A /* AcceptRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptRequestViewController.swift; sourceTree = "<group>"; };
 		BDB1795C227BB16B005A7C6E /* Uber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB1795F227BB16B005A7C6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDB17961227BB16B005A7C6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				BDB1795F227BB16B005A7C6E /* AppDelegate.swift */,
 				BDB17961227BB16B005A7C6E /* ViewController.swift */,
 				BDB17963227BB16B005A7C6E /* Main.storyboard */,
+				BD970909227E72760076338A /* AcceptRequestViewController.swift */,
 				BD8C0412227BC2B6006064C4 /* RiderViewController.swift */,
 				BDED9379227E4EB5009E8367 /* DriverTableViewController.swift */,
 				BDB17966227BB16C005A7C6E /* Assets.xcassets */,
@@ -220,6 +223,7 @@
 				BDED937A227E4EB5009E8367 /* DriverTableViewController.swift in Sources */,
 				BDB17962227BB16B005A7C6E /* ViewController.swift in Sources */,
 				BDB17960227BB16B005A7C6E /* AppDelegate.swift in Sources */,
+				BD97090A227E72760076338A /* AcceptRequestViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

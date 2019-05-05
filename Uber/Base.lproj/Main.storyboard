@@ -81,10 +81,8 @@
                             <constraint firstItem="ZCd-xE-U2t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Fp-U5-TDT"/>
                             <constraint firstItem="hfu-GE-ga5" firstAttribute="top" secondItem="1kc-Cc-c4N" secondAttribute="bottom" constant="8" id="ANV-m9-ddL"/>
                             <constraint firstItem="ot4-CZ-NUW" firstAttribute="top" secondItem="1kc-Cc-c4N" secondAttribute="bottom" constant="8" id="JER-XE-JC8"/>
-                            <constraint firstItem="ot4-CZ-NUW" firstAttribute="centerY" secondItem="hfu-GE-ga5" secondAttribute="centerY" id="LNO-65-pJ2"/>
                             <constraint firstItem="HH6-eS-aEM" firstAttribute="top" secondItem="Khe-uw-Wdb" secondAttribute="bottom" constant="8" id="MfS-rf-aYL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1kc-Cc-c4N" secondAttribute="trailing" constant="20" id="N9f-Pi-BdY"/>
-                            <constraint firstItem="hfu-GE-ga5" firstAttribute="leading" secondItem="ot4-CZ-NUW" secondAttribute="trailing" constant="120.5" id="Ok9-LZ-zPK"/>
                             <constraint firstItem="Khe-uw-Wdb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="P0P-of-REd"/>
                             <constraint firstItem="1kc-Cc-c4N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Pwh-nt-76x"/>
                             <constraint firstItem="IuI-Hm-bJJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rnq-Ec-Xdq"/>
@@ -124,8 +122,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="C23-HZ-RxN">
-                                <rect key="frame" x="20" y="108" width="374" height="374"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="C23-HZ-RxN">
+                                <rect key="frame" x="20" y="108" width="374" height="365"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="C23-HZ-RxN" secondAttribute="height" multiplier="1:1" id="uvg-kf-RX1"/>
                                 </constraints>
@@ -191,7 +189,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ymn-WG-D5S">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="Ymn-WG-D5S">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ymn-WG-D5S" id="OhM-zH-qfc">
@@ -212,10 +210,53 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="D7t-WU-7eb" kind="show" identifier="acceptSegue" id="GYM-0E-qqn"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="acE-J6-s1T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1568.1159420289857" y="747.99107142857144"/>
+        </scene>
+        <!--Accept Request View Controller-->
+        <scene sceneID="aZY-R1-HuH">
+            <objects>
+                <viewController id="D7t-WU-7eb" customClass="AcceptRequestViewController" customModule="Uber" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JK1-1f-3jg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xsv-MV-Nn4">
+                                <rect key="frame" x="20" y="108" width="374" height="374"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xsv-MV-Nn4" secondAttribute="height" multiplier="1:1" id="Prm-o1-Do0"/>
+                                </constraints>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZK-t7-lCQ">
+                                <rect key="frame" x="152.5" y="505" width="109" height="30"/>
+                                <state key="normal" title="Accept Request"/>
+                                <connections>
+                                    <action selector="acceptTapped:" destination="D7t-WU-7eb" eventType="touchUpInside" id="rZs-FW-4Zk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6BL-mY-Uah" firstAttribute="trailing" secondItem="xsv-MV-Nn4" secondAttribute="trailing" constant="20" id="CZ5-Ta-auf"/>
+                            <constraint firstItem="AZK-t7-lCQ" firstAttribute="top" secondItem="xsv-MV-Nn4" secondAttribute="bottom" constant="23" id="Lut-0F-N8D"/>
+                            <constraint firstItem="xsv-MV-Nn4" firstAttribute="leading" secondItem="6BL-mY-Uah" secondAttribute="leading" constant="20" id="OBh-VZ-EDL"/>
+                            <constraint firstItem="xsv-MV-Nn4" firstAttribute="top" secondItem="6BL-mY-Uah" secondAttribute="top" constant="20" id="W5y-ZT-9Yi"/>
+                            <constraint firstItem="AZK-t7-lCQ" firstAttribute="centerX" secondItem="JK1-1f-3jg" secondAttribute="centerX" id="WZJ-ms-yOY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6BL-mY-Uah"/>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="xsv-MV-Nn4" id="JMu-qI-Q6X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="doj-HB-OiN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2271.0144927536235" y="750"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y6G-yn-FmL">
